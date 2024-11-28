@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffc107; /* Yellow background */
+            height: calc(100vh - 60px); /* Full screen minus header height */
+            padding: 0 5%;
+        }
+
+        .left-section {
+            width: 55%;
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+            line-height: 1.2;
+        }
+
+        .login-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .login-form input[type="password"] {
+            width: 300px;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        LYCEUM WATTALA CADETS
+    </header>
+
+    <div class="main-content">
+        <!-- Left Section -->
+        <div class="left-section">
+            If you fail to plan, <br> you plan to fail.
+        </div>
+
+        <!-- Right Section -->
+        <div class="login-form">
+            <input type="password" id="password" placeholder="*password">
+            <button onclick="checkPassword()">Log in</button>
+            <p id="errorMessage" style="color: red; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <script>
+        const AdminPassword = 'Admin123';
+        const UserPassword = 'User123';
+
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const errorMessageElement = document.getElementById('errorMessage');
+
+            // Clear previous error messages
+            errorMessageElement.innerText = '';
+
+            if (password === AdminPassword) {
+                window.location.href = 'file:///D:/OneDrive/Desktop/Admin%20page.html';
+            } else if (password === UserPassword) {
+                window.location.href = 'file:///D:/OneDrive/Desktop/New%20Home.html';
+            } else {
+                errorMessageElement.innerText = 'Incorrect password, please try again.';
+            }
+        }
+    </script>
+</body>
+</html>

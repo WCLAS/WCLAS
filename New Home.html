@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffc107; /* Yellow theme */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: black;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .presentation {
+            font-size: 18px;
+            text-align: justify;
+            margin: 20px auto 40px;
+            color: #fff;
+        }
+
+        .content-box {
+            background-color: #333;
+            color: white;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            cursor: pointer;
+            width: 300px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .content-box:hover {
+            background-color: #ffc107;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Lyceum Wattala Cadet Platoon</h1>
+    </header>
+
+    <div class="container">
+        <!-- Presentation Section -->
+        <div class="presentation">
+            <h3>MOTTO</h3>
+            <p>
+                “To train and inspire every school cadet through effective training curriculum which inculcate core values of NCC and mould them to become competent and effective leaders within and outside the school.”
+            </p>    
+            
+            <h3>WHAT DO WE DO?</h3>
+            </p>    
+                                                 The National Cadet Corps is a youth organisation in Sri Lanka sponsored by the Ministry of Defence which operates in schools for students from the age of 12 to 16. All Cadets undergo practical and theoretical training in their platoon and company level in areas such as Physical Fitness, Foot Drill, Weapon Training and Firing, Map Reading, Field Craft, First Aid, Regimental Duties, Confidence Building Course, Leadership Activities, Fire Fighting to groom them to become dynamic, versatile and disciplined citizens with extraordinary leadership qualities to face the utmost challenges in society.
+            </p>
+        </div>
+
+        <!-- Daily Schedule Button -->
+        <div class="content-box" onclick="goToDailySchedule()">
+            <h2>Daily Schedule</h2>
+        </div>
+
+        <!-- Study Schedule Button -->
+        <div class="content-box" onclick="goToStudySchedule()">
+            <h2>Study Schedule</h2>
+        </div>
+
+    </div>
+
+    <!-- Script Section -->
+    <script>
+        // Define passwords
+        const DeannePassword = 'Deanne123';
+        const SenudiPassword = 'Senudi123';
+        const SanuthiPassword = 'Sanuthi123';
+        const MayumdiPassword = 'Mayumdi123';
+
+        // Redirect to the daily schedule
+        function goToDailySchedule() {
+            const password = prompt("Please enter your unique password to access the daily schedule:");
+            if (password === DeannePassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1UmN8Zh1oKFdTvDSR23dwYLvcgICxA2wbK4PP9wfpJqo/edit?usp=sharing';
+            } else if (password === SenudiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/11rh5YFWlFCORkO7aA5e9cXA4qnc46FeJ44NhT3E4_AQ/edit?usp=sharing';
+            } else if (password === SanuthiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1h3fVhhImtCdMY0e4N2b_kdmoz4bNrmtoVpUGZwch610/edit?usp=sharing';
+            } else if (password === MayumdiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1rD4IycS1MVpz0G460h4VPoaiI_8z5uhaKFtB9YNPTdw/edit?usp=sharing';
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+
+        // Redirect to the study schedule
+        function goToStudySchedule() {
+            const password = prompt("Please enter your unique password to access the study schedule:");
+            if (password === DeannePassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1gizZMM7MqhnlbppCMqXoj6zB-QNrF52C0iKd-W8HGs8/edit?usp=sharing';
+            } else if (password === SenudiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/11rh5YFWlFCORkO7aA5e9cXA4qnc46FeJ44NhT3E4_AQ/edit?usp=sharing';
+            } else if (password === SanuthiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1h3fVhhImtCdMY0e4N2b_kdmoz4bNrmtoVpUGZwch610/edit?usp=sharing';
+            } else if (password === MayumdiPassword) {
+                window.location.href = 'https://docs.google.com/spreadsheets/d/1rD4IycS1MVpz0G460h4VPoaiI_8z5uhaKFtB9YNPTdw/edit?usp=sharing';
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+    </script>
+</body>
+</html>

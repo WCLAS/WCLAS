@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .schedule-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .schedule-box {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Personal Schedule</h1>
+
+    <div class="schedule-container">
+        <h2>Daily Schedule</h2>
+        <textarea class="schedule-box" placeholder="Enter your daily schedule here..." rows="10"></textarea>
+
+        <h2>Daily Study Schedule</h2>
+        <textarea class="schedule-box" placeholder="Enter your study schedule here..." rows="10"></textarea>
+
+        <button onclick="saveSchedule()">Save</button>
+    </div>
+
+    <script>
+        function saveSchedule() {
+            alert("Your schedule has been saved!");
+            // Integrate Google Sheets API here to save to user-specific sheets
+        }
+    </script>
+</body>
+</html>
+

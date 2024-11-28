@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .main-content {
+            background-color: #ffc107; /* Yellow background */
+            height: calc(100vh - 60px); /* Full screen minus header height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        LYCEUM WATTALA CADETS
+    </header>
+
+    <div class="main-content">
+        <h1>Good morning Sir/Ma'am!</h1>
+        <p>To check on the cadet's attendance and schedules<br>Please click on the relevant topic.</p>
+        <div class="button-container">
+            <button onclick="handleButtonClick()">Daily Schedules</button>
+            <button onclick="handleButtonClick()">Study Books</button>
+            <button onclick="handleButtonClick()">Attendance sheet</button>
+        </div>
+    </div>
+
+    <script>
+        function handleButtonClick() {
+            const passwords = {
+                "Deanne": "https://docs.google.com/spreadsheets/d/1UmN8Zh1oKFdTvDSR23dwYLvcgICxA2wbK4PP9wfpJqo/edit?usp=sharing", // Replace with actual URL
+                "Senudi": "https://docs.google.com/spreadsheets/d/11rh5YFWlFCORkO7aA5e9cXA4qnc46FeJ44NhT3E4_AQ/edit?usp=sharing",    // Replace with actual URL
+                "Sanuthi": "https://docs.google.com/spreadsheets/d/1h3fVhhImtCdMY0e4N2b_kdmoz4bNrmtoVpUGZwch610/edit?usp=sharing", // Replace with actual URL
+                "Mayumdi": "https://docs.google.com/spreadsheets/d/1rD4IycS1MVpz0G460h4VPoaiI_8z5uhaKFtB9YNPTdw/edit?usp=sharing", // Replace with actual URL
+                "Deanne2": "https://docs.google.com/spreadsheets/d/1gizZMM7MqhnlbppCMqXoj6zB-QNrF52C0iKd-W8HGs8/edit?usp=sharing", // Replace with actual URL
+                "Senudi2": "https://docs.google.com/spreadsheets/d/11rh5YFWlFCORkO7aA5e9cXA4qnc46FeJ44NhT3E4_AQ/edit?usp=sharing",    // Replace with actual URL
+                "Sanuthi2": "https://docs.google.com/spreadsheets/d/1h3fVhhImtCdMY0e4N2b_kdmoz4bNrmtoVpUGZwch610/edit?usp=sharing", // Replace with actual URL
+                "Mayumdi2": "https://docs.google.com/spreadsheets/d/1rD4IycS1MVpz0G460h4VPoaiI_8z5uhaKFtB9YNPTdw/edit?usp=sharing", // Replace with actual URL
+                "Attendance": "https://docs.google.com/spreadsheets/d/12AoPfiXMVfwulcm4KLuhdC24_y93J6teh9Qh-R1ALRA/edit?usp=sharing", // Replace with actual URL    
+            };
+
+            const inputPassword = prompt("Please enter your password:");
+
+            if (inputPassword in passwords) {
+                window.location.href = passwords[inputPassword];
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
